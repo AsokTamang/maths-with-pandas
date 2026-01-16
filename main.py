@@ -25,3 +25,4 @@ df_nike2.isnull()
 
 print(df_nike2[df_nike2['sold_qty'].isnull()])
 
+
