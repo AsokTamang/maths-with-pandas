@@ -12,12 +12,12 @@ print(df.describe())
 
 #converting the numeric column data types into same int type
 #display all the column names
-df['total_charges'] = pd.to_numeric(df.tenure)
-df['monthly_charges'] = pd.to_numeric(df.tenure)
+df['total_charges'] = pd.to_numeric(df.total_charges, errors='coerce')
+df['monthly_charges'] = pd.to_numeric(df.monthly_charges, errors='coerce')
 df['tenure'] = pd.to_numeric(df.tenure)
 print(df.info())
-
-
+print(df.monthly_charges.mode())
+print(df.monthly_charges.max()-df.monthly_charges.min())
 
 
 
