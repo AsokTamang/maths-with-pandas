@@ -23,6 +23,8 @@ print(df.monthly_charges.max()-df.monthly_charges.min())
 firstq_mc = df[df['churn']=='No']['monthly_charges'].quantile(0.25)
 print(firstq_mc)
 
-
+#calculating the third quartile of total_charges column
+thirdq_tc = df[df['churn']=='Yes']['total_charges'].quantile(0.90)
+print(thirdq_tc)
 
 
