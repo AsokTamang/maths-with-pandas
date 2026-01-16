@@ -34,3 +34,6 @@ main = df[(df['churn']=='Yes') & (df['contract']=='Month-to-month')]['total_char
 print('the main is:', main)
 print(main.mean())
 
+
+# Filter the rows based on the churn status and contract type
+tencol = df[(df['churn']=='No') & (df['contract'] == 'Two year')]['tenure']
