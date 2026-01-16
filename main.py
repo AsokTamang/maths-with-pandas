@@ -23,5 +23,5 @@ print(fiftyth_value)
 df_nike2=df[df['brand']=='Nike']
 df_nike2.isnull()
 
-
+print(df_nike2[df_nike2['sold_qty'].isnull()])
 
