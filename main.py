@@ -5,3 +5,5 @@
 
 import pandas as pd
 df = pd.read_csv("C:/Users/ashok/Downloads/chapter4_assets/chapter4_assets/4_shoe_sale_analysis/shoe_sales.csv")
+
+print(df[df.sold_qty<12.25].shape)
