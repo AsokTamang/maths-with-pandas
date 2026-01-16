@@ -10,3 +10,4 @@ print(df[df.sold_qty<12.25].shape)
 
 df_new=df[df['sold_qty']>19.75].sort_values('sold_qty')
 print(df_new)
+print(df_new['sold_qty'].quantile(0.5))  #finding the 50th percentile value among the sold_qty dataset having higher value or equal to the 90th percentile value among total sold qty dataset
