@@ -28,3 +28,8 @@ thirdq_tc = df[df['churn']=='Yes']['total_charges'].quantile(0.90)
 print(thirdq_tc)
 
 
+
+# Filter the rows based on the churn status and contract type
+main = df[(df['churn']=='Yes') & (df['contract']=='Month-to-month')]['total_charges']
+print('the main is:', main)
+
