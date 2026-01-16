@@ -37,3 +37,4 @@ print(main.mean())
 
 # Filter the rows based on the churn status and contract type
 tencol = df[(df['churn']=='No') & (df['contract'] == 'Two year')]['tenure']
+print(tencol.median())
