@@ -19,6 +19,10 @@ print(df.info())
 print(df.monthly_charges.mode())
 print(df.monthly_charges.max()-df.monthly_charges.min())
 
+#calculating the first quartile of monthly_charges column
+firstq_mc = df[df['churn']=='No']['monthly_charges'].quantile(0.25)
+print(firstq_mc)
+
 
 
 
