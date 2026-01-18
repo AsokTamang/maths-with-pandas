@@ -54,3 +54,5 @@ upper_limit_sd = qsd3 + (1.5 * iqrsd)
 print(upper_limit_sd)
 outlier_sd =    df[(df['sleep_duration(hours)']<lower_limit_sd) | (df['sleep_duration(hours)']>upper_limit_sd)]
 print(outlier_sd)
+
+
