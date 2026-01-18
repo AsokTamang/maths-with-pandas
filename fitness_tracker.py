@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 import openpyxl
 #You work for a fitness company and have gathered data on the fitness activities of 50 individuals using fitness trackers. The dataset is stored in an Excel file named "fitness_data.xlsx" and includes the following columns:
 #name: Name of the person.
@@ -31,3 +32,16 @@ print(iqrsd)
 qw1,qw2,qw3 = df['water_intake(ounces)'].quantile([0.25,0.5,0.75])
 iqrw = qw3 - qw1
 print(iqrw)
+
+
+#Box Plot for Steps Taken
+
+
+# Set the figure size
+
+plt.figure(figsize=(10,7))
+df['steps_taken'].plot(kind='box',title = 'Steps_Taken Distribution', patch_artist=True)
+plt.ylabel('Number of steps')
+plt.tight_layout()
+plt.show()
+
