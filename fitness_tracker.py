@@ -24,3 +24,10 @@ print(range_calories_burned)
 qsd1,qsd2,qsd3 = df['sleep_duration(hours)'].quantile([0.25,0.5,0.75])
 iqrsd = qsd3 - qsd1
 print(iqrsd)
+
+
+
+# Calculate the IQR for "water_intake(ounces)"
+qw1,qw2,qw3 = df['water_intake(ounces)'].quantile([0.25,0.5,0.75])
+iqrw = qw3 - qw1
+print(iqrw)
