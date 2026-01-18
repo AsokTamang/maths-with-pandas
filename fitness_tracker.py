@@ -45,3 +45,12 @@ plt.ylabel('Number of steps')
 plt.tight_layout()
 plt.show()
 
+
+
+#Use the IQR method to identify and label outliers in the "sleep_duration(hours)" column.
+lower_limit_sd = qsd1 - (1.5 * iqrsd)
+print(lower_limit_sd)
+upper_limit_sd = qsd3 + (1.5 * iqrsd)
+print(upper_limit_sd)
+outlier_sd =    df[(df['sleep_duration(hours)']<lower_limit_sd) | (df['sleep_duration(hours)']>upper_limit_sd)]
+print(outlier_sd)
