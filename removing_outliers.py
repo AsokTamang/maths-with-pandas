@@ -43,3 +43,7 @@ df= df[(df.height>left3) & (df.height<right3)]
 sns.histplot(df)  #removing the outliers
 plt.show()  #after removing the outliers
 
+
+
+
+

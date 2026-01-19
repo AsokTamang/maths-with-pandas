@@ -7,6 +7,6 @@ s=df.height.std()
 print('The mean is:', m)
 print('The standard deviation is:', s)
 df['Z-Score'] = (df['height'] - m) / s
-#as the valid z-score range is between -3 to 3
+#as the valid z-score range is between -3 to 3  (excluding the -3 and 3)
 outliers = df[(df['Z-Score']<-3)|(df['Z-Score']>3)]
 print('The outliers based on z-score is:' , outliers)
