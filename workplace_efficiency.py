@@ -6,3 +6,9 @@ df = pd.read_csv("C:/Users/ashok/Downloads/chapter6_exercise2/chapter6_exercise2
 print(df.shape)
 df.head(5)
 
+#Statistical Measures of Work Hours
+mean_hrs = df['hours_worked_per_day'].mean()
+print(mean_hrs)
+std_hrs = df['hours_worked_per_day'].std()
+print(std_hrs)
+
