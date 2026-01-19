@@ -38,3 +38,33 @@ plt.axvline(x=left3,color='red',linestyle='dashed',label='+-three std_age')
 plt.axvline(x=right3,color='red',linestyle='dashed')
 plt.show()
 
+
+
+
+
+
+mean_rate = df['player_rating'].mean()
+std_rate= df.player_rating.std()
+
+left1_rate = mean_rate-std_rate
+right1_rate= mean_rate+std_rate
+within_onerange_rate = df[(df.player_rating>left1) & (df.player_rating<right1)]
+
+
+left2_rate = mean_rate- (2 * std_rate)
+right2_rate = mean_rate+ (2*std_rate)
+within_tworange_rate = df[(df.player_rating>left2) & (df.player_rating<right2)]
+
+left3_rate = mean_rate- (3 * std_rate)
+right3_rate = mean_rate+ (3 * std_rate)
+within_threerange_rate = df[(df.player_rating>left3) & (df.player_rating<right3)]
+
+sns.histplot(df['player_rating'],kde=True)
+plt.axvline(x=mean_rate,color='black',linestyle='dashed',label='mean')
+plt.axvline(x=left1_rate,color='g',linestyle='dashed',label='+-one std_age')
+plt.axvline(x=right1_rate,color='g',linestyle='dashed')
+plt.axvline(x=left2_rate,color='blue',linestyle='dashed',label='+-two std_age')
+plt.axvline(x=right2_rate,color='blue',linestyle='dashed')
+plt.axvline(x=left3_rate,color='red',linestyle='dashed',label='+-three std_age')
+plt.axvline(x=right3_rate,color='red',linestyle='dashed')
+plt.show()
