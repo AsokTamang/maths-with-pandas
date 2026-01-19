@@ -12,12 +12,16 @@ print(mean_hrs)
 std_hrs = df['hours_worked_per_day'].std()
 print(std_hrs)
 
-# Calculating Z-Scores for Outlier Detection
+#Calculating Z-Scores for Outlier Detection
 df['ZScores'] = (df['hours_worked_per_day'] - mean_hrs) / std_hrs
 print(df)
 
-#Removing Outliers Based on Z-Scores
+#finding the outliers
 outliers = df[(df['ZScores'] < -3) | (df['ZScores'] > 3)]
 print(outliers)
+#Removing Outliers Based on Z-Scores
 non_outliers = df[(df['ZScores'] > -3) & (df['ZScores'] < 3)]
 print(non_outliers)
+
+sns.histplot(non_outliers['ZScores'],kde=True)
+plt.show()
