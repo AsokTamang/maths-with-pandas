@@ -12,3 +12,6 @@ print(mean_hrs)
 std_hrs = df['hours_worked_per_day'].std()
 print(std_hrs)
 
+# Calculating Z-Scores for Outlier Detection Calculating Z-Scores for Outlier Detection
+df['ZScores'] = (df['hours_worked_per_day'] - mean_hrs) / std_hrs
+print(df)
