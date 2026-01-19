@@ -68,3 +68,22 @@ plt.axvline(x=right2_rate,color='blue',linestyle='dashed')
 plt.axvline(x=left3_rate,color='red',linestyle='dashed',label='+-three std_age')
 plt.axvline(x=right3_rate,color='red',linestyle='dashed')
 plt.show()
+
+
+lower_age_limit = mean_age - (3 * std_age)
+upper_age_limit = mean_age + (3 * std_age)
+lower_rate_limit = mean_rate - (3 * std_rate)
+upper_rate_limit = mean_rate + (3 * std_rate)
+outliers_age = df[(df['age']<lower_age_limit) | (df['age']>upper_age_limit)]
+outliers_rate = df[(df['player_rating']<lower_rate_limit) | (df['player_rating']>upper_rate_limit)]
+
+non_outliers= df[(df['age']>lower_age_limit) & (df['age']<upper_age_limit) & (df['player_rating']>lower_rate_limit) & (df['player_rating']<upper_rate_limit)]
+plt.figure()
+sns.histplot(non_outliers.age,kde=True)
+plt.show()
+
+plt.figure()
+sns.histplot(non_outliers.player_rating,kde=True)
+plt.show()
+
+
